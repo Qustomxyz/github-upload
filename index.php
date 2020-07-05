@@ -5,7 +5,7 @@
 
                 protected $complited;
 
-                public __construct($description) {
+                public function __construct($description) {
                         $this->description = $description
                 }
         }
