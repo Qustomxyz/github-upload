@@ -6,7 +6,7 @@
                 protected $complited;
 
                 public function __construct($description) {
-                        $this->description = $description
+                        $this->description = $description;
                 }
         }
 
