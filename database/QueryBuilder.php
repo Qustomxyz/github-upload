@@ -13,6 +13,6 @@ class QueryBuilder {
 
         $statment->execute();
 
-        $return $statment->fetchAll(PDO::FETCH_CLASS);
+        return $statment->fetchAll(PDO::FETCH_CLASS);
     }
 }
