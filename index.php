@@ -3,7 +3,7 @@
 $query = require 'bootstrap.php';
 require 'Task.php';
 
-$tasks = $query->selectAll('todos', 'Task');
+$tasks = $query->selectAll('todoss', 'Task');
 
 require 'index.view.php';
 
