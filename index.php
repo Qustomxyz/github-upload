@@ -14,7 +14,7 @@ $statment = $pdo->prepare('select * from todos');
 
 $statment->execute();
 
-var_dump($statment->fetchAll());
+var_dump($statment->fetchAll(PDO::FETCH_OBJ));
 
 
 
