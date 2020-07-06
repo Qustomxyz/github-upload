@@ -11,9 +11,9 @@
         <?php foreach ($tasks as $task) : ?>
         <li>
             <?php if ($task->completed) : ?>
-                <strike><?php $task->description; ?></strike>
+                <strike><?= $task->description; ?></strike>
             <?php else : ?>
-                <?php $task->description; ?>
+                <?= $task->description; ?>
             <?php endif; ?>
         </li>
         <?php endforeach; ?>
