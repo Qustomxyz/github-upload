@@ -1,18 +1,16 @@
 <?php
 
 require 'database/Connection.php';
+require 'database/QueryBuilder';
 require 'Task.php';
 
 $conf = require 'config/config.php';
 
 $pdo = Connection::make($conf);
 
-$statment = $pdo->prepare('select * from todos');
+$query = new QueryBuilder($pdo);
 
-$statment->execute();
-
-$tasks = $statment->fetchAll(PDO::FETCH_CLASS, 'Task');
-var_dump($tasks);
+$tasks = $query->selectAll('todos');
 
 require 'index.view.php';
 
