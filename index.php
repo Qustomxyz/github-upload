@@ -1,7 +1,7 @@
 <?php
 
 require 'database/Connection.php';
-require 'database/QueryBuilder';
+require 'database/QueryBuilder.php';
 require 'Task.php';
 
 $conf = require 'config/config.php';
