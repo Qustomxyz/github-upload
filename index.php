@@ -14,7 +14,10 @@ $statment = $pdo->prepare('select * from todos');
 
 $statment->execute();
 
-var_dump($statment->fetchAll(PDO::FETCH_OBJ));
+$tasks = $statment->fetchAll(PDO::FETCH_OBJ)[0];
+var_dump($tasks)
+
+require 'index.view.php';
 
 
 
@@ -28,9 +31,5 @@ var_dump($statment->fetchAll(PDO::FETCH_OBJ));
                         $this->description = $description;
                 }
         }
-
-        $task = new Task('Go to go');
-
-        var_dump($task);
 
 ?>
