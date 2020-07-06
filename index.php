@@ -1,6 +1,6 @@
 <?php
 
-//echo phpinfo();
+require 'Task.php';
 
 $conf = require 'config/config.php';
 
@@ -14,22 +14,9 @@ $statment = $pdo->prepare('select * from todos');
 
 $statment->execute();
 
-$tasks = $statment->fetchAll(PDO::FETCH_OBJ);
+$tasks = $statment->fetchAll(PDO::FETCH_CLASS, 'Task');
 var_dump($tasks);
 
 require 'index.view.php';
-
-
-
-        class Task {
-
-                protected $description;
-
-                protected $complited;
-
-                public function __construct($description) {
-                        $this->description = $description;
-                }
-        }
 
 ?>
