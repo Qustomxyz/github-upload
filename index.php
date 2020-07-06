@@ -1,7 +1,7 @@
 <?php
 
 try {
-        $pdo = new PDO('mysql:host:=127.0.0.1;dbname=larac', 'www', '117630');
+        $pdo = new PDO('mysql:host:=127.0.0.1;dbname=laca', 'www', '117630');
 } catch(PDOexception $e) {
         die('Could not connect.');
 }
