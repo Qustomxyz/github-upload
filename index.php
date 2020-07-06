@@ -1,9 +1,11 @@
 <?php
 
-echo phpinfo();
+//echo phpinfo();
+
+$conf = require 'config/config.php'
 
 try {
-        $pdo = new PDO('mysql:host=127.0.0.1;dbname=laca', 'www', '117630');
+        $pdo = new PDO("mysql:host=127.0.0.1;dbname='{$conf['db']['dbname']}", $conf['db']['user'], $conf['db']['psw']);
 } catch(PDOexception $e) {
         die('Could not connect:'.$e);
 }
