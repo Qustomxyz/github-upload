@@ -4,4 +4,4 @@ require 'Task.php';
 
 $tasks = $query->selectAll('todos', 'Task');
 
-require 'view/index.view.php';
+require 'views/index.view.php';
