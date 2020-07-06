@@ -5,7 +5,7 @@ require 'Task.php';
 
 $conf = require 'config/config.php';
 
-$pdo = Connection::make();
+$pdo = Connection::make($conf);
 
 $statment = $pdo->prepare('select * from todos');
 
